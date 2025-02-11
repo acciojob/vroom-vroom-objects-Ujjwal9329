@@ -4,15 +4,14 @@ class Car {
         this.model = model;
     }
 
-
     getMakeModel() {
-        return ${this.make} ${this.model};
+        return `${this.make} ${this.model}`; // ✅ Corrected template literal
     }
 }
 
 class SportsCar extends Car {
     constructor(make, model, topSpeed) {
-        super(make, model); 
+        super(make, model); // ✅ Calls the parent constructor
         this.topSpeed = topSpeed;
     }
 
@@ -21,6 +20,6 @@ class SportsCar extends Car {
     }
 }
 
-
+// Do not change this
 window.Car = Car;
 window.SportsCar = SportsCar;
